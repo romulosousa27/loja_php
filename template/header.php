@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <title>Loja</title>
     
@@ -18,14 +18,11 @@
             </div>
             <div>
                 <ul class="nav navbar-nav">
-                    <li><a href="form-produtos">Adicionar Produto</a></li>
-                </ul>
-                <ul class="nav navbar-nav">
-                    <li><a href="listar-produtos.php">Produtos</a></li>
+                    <li><a href="formulario.php">Adicionar Produto</a></li>
+                    <li><a href="listar.php">Produtos</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    
     <div class="container">
         <div class="principal">

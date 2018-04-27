@@ -1,7 +1,7 @@
 <?=
     include("template/header.php");
     include("conexao/index.php");
-    include("produto-bd.php");
+    include("funcoes_produtos.php");
 ?>
 
 <?php
@@ -18,15 +18,17 @@
         $usado = "false";
     }
 
-    //retorna se inseriu os dados corretamento
-    if (insereProd($conexao, $nome, $preco, $descricao, $categoria_id)) {
-        echo "<p class='alert-success'>Produto <?= $nome ?> com o valor de <?= $preco ?> foi adicionado com sucesso!</p>";
-    }
-    //caso tenha falha no cadastro.
+    //INSERE O PRODUTO DO FORMULARIO
+    if (InsereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado)) { ?>
+        <p class='alert-success'>Produto <?= $nome; ?> com o valor de <?= $preco; ?> foi adicionado com sucesso!</p>;
+    <?php }
+    //FALHA AO CADASTRAR
     else {
         $msg = mysqli_error($conexao);
-        echo "<p class='alert-danger'>Produto <?= $nome ?> não foi adicionado: <?= $msg ?></p>";
-    }
-?>
+    ?>
+        <p class='alert-danger'>Produto <?= $nome; ?> não foi adicionado: <?= $msg; ?></p>;
+    <?php
+        }
+    ?>
 
 <?= include("template/footer.php") ?>

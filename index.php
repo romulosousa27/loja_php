@@ -1,5 +1,3 @@
-<?= include("template/header.php") ?>
-
-<h1>Bem Vindo</h1>
-
-<?= include("template/footer.php") ?>
+<?php include("template/header.php"); ?>
+    <h1>Bem vindo!</h1>
+<?php include("template/footer.php"); ?>
