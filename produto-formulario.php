@@ -1,8 +1,12 @@
 <?php include("cabecalho.php");
       include("conecta.php");
       include("banco-categoria.php");
+      include("logica-usuario.php");
 
-$categorias = listaCategorias($conexao);
+      verificaUsuario();
+      usuarioEstaLogado();
+
+    $categorias = listaCategorias($conexao);
 ?>
 
 <h1>Formulário de produto</h1>
